@@ -12,7 +12,7 @@ h1 {
 .myprofile {
   width: 70%;
   /*height: 85%;*/
-  margin-left: 190px;
+  margin: 0 auto;
   position: relative;
   padding: 0.25em 1em;
   border: solid 5px black;
@@ -60,11 +60,25 @@ border: solid 3px #ffcb8a; /*枠線*/
 .myimg {
   width: 300px;
   height: 400px;
-  margin: 60px 60px;
+  margin: 60px;
 }
 
 .text {
-  /*line-height: 1.5;*/
-  margin: 0px 0px 60px 80px;
+  text-align: center;
+  margin: 0 auto;
+}
 
+.vision {
+  display: flex;
+}
+
+.text2 {
+  margin: 30px 10px 0px 50px;
+}
+
+.myimg2 {
+  width: 300px;
+  height: 400px;
+  margin: 60px;
+  opacity: 0.7;
 }
