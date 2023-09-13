@@ -12,7 +12,7 @@
       </nav>
       <hr />
 
-      <%= form_with model: @contact, local:true do |f| %>
+      <%= form_with model: @contact, local: true, url: contacts_done_path do |f| %>
 
         <div class="form-group">
           <%= form.label :name, '名前' %>

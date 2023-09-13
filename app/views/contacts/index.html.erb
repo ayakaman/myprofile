@@ -11,7 +11,7 @@
       </nav>
       <hr />
 
-      <%= form_with model: @contact, local:true do |f| %>
+      <%= form_with model: @contact, local: true, url: contacts_confirm do |f| %>
         <% if @contact.errors.any? %>
           <div class="alert alert-danger" role="alert">
             <h5><strong>入力内容にエラーがあります。</strong></h5>
