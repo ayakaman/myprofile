@@ -16,8 +16,16 @@ class ContactsController < ApplicationController
 
   def done
     @contact = Contact.new(contact_params)
-    ContactMailer.send_mail(@contact).deliver_now
-    render :action => 'done'
+    if params[:back]
+      render :action => 'index'
+    else
+      if ContactMailer.send_mail(@contact).deliver_now
+         flash[:notice] = '送信しました'
+      else
+         flash[:alert] = '送信できませんでした'
+      end
+      render :action => 'done'
+    end
   end
 
   private
