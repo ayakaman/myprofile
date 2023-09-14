@@ -2,6 +2,7 @@ class ContactsController < ApplicationController
 
   def index
       @contact = Contact.new
+      render :action => 'index'
   end
 
   def confirm
@@ -15,17 +16,13 @@ class ContactsController < ApplicationController
 
   def done
     @contact = Contact.new(contact_params)
-    if params[:back]
-      render :action => 'index'
-    else
-      ContactMailer.send_mail(@contact).deliver_now
-      render :action => 'done'
-    end
+    ContactMailer.send_mail(@contact).deliver_now
+    render :action => 'done'
   end
 
-    private
-      def contact_params
-        params.require(:contact).permit(:name, :email, :phone_number, :message)
-      end
+  private
+    def contact_params
+      params.require(:contact).permit(:name, :email, :phone_number, :message)
+    end
 
 end

@@ -6,10 +6,8 @@ Rails.application.routes.draw do
 
   get 'lists/profile' => 'lists#profile'
 
-  resources :contacts, only: [:index, :confirm]
-
-  post 'contacts/confirm', to: 'contacts#confirm', as: 'confirm'
-  post 'contacts/back', to: 'contacts#back', as: 'back'
-  get 'done', to: 'contacts#done', as: 'done'
+  get'contacts' => 'contacts#index'
+  post 'contacts/confirm' => 'contacts#confirm'
+  post 'contacts/done' => 'contacts#done'
 
 end
