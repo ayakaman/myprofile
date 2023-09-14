@@ -61,7 +61,7 @@ Rails.application.configure do
 
 
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = { address: 'localhost', port: 1080, }
+  config.action_mailer.smtp_settings = { address: 'localhost', port: 1080, enable_starttls_auto: true, openssl_verify_mode: 'none', }
   config.action_mailer.raise_delivery_errors = true
 
 end
