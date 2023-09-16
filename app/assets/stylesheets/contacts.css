@@ -1,0 +1,36 @@
+.textbox-001-label,
+.form-group {
+    color: #333;
+}
+
+.textbox-001-label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: .9em;
+}
+
+.form-group {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #969da3;
+    border-radius: 3px;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.form-control::placeholder {
+    color: #999;
+}
+
+.textbox-001-label {
+ border-radius: 5px;
+ margin-right: 10px;
+ padding-top: 10px;
+ padding-bottom: 10px;
+ width: 55px;
+ display: inline-block;
+ text-align: center;
+ background: #340beb;
+ color: #fff;
+ font-size: 15px;
+}
