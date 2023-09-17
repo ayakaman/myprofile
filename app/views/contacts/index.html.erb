@@ -13,45 +13,49 @@
    </header>
     <div class="main-v">
       <div class="contact">
-      <div class="contact-box">
+       <div class="contact-box">
         <h2 class="title">お問い合わせ</h2>
-    <%= form_with model: @contact, local: true, url: contacts_confirm_path do |f| %>
-      <% if @contact.errors.any? %>
-      <div class="alert alert-danger" role="alert">
-       <h5><strong>入力内容にエラーがあります。</strong></h5>
-       <ul>
-         <% @contact.errors.full_messages.each do |message| %>
-           <li><%= message %></li>
-         <% end %>
-       </ul>
+        <%= form_with model: @contact, local: true, url: contacts_confirm_path do |f| %>
+        <% if @contact.errors.any? %>
+        <div class="alert alert-danger" role="alert">
+            <h5><strong>入力内容にエラーがあります。</strong></h5>
+            <ul>
+                <% @contact.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+                <% end %>
+            </ul>
+        </div>
+        <% end %>
+       <div class="form-group">
+          <div class="contact-text">
+            <%= f.label :name, '名前' %>
+            <span class="textbox-label">必須</span>
+          </div>
+          <%= f.text_field :name, id: 'name', class: 'form-input', :placeholder => '山田 花子' %>
+       </div>
+       <div class="form-group">
+          <div class="contact-text">
+            <%= f.label :email, 'メールアドレス' %>
+            <span class="textbox-label">必須</span>
+          </div>
+          <%= f.text_field :email, id: 'email', class: 'form-input', :placeholder => 'user@example.com' %>
+       </div>
+       <div class="form-group">
+          <div class="contact-text">
+           <%= f.label :message, 'お問い合わせ内容' %>
+           <span class="textbox-label">必須</span>
+          </div>
+          <%= f.text_area :message, id: 'content', class: 'form-input-last', :placeholder => 'お問い合わせ内容', :rows => '5' %>
+       </div>
+       <div class="contact-bnt">
+         <%= f.submit "確認", class: "btn" %>
+       </div>
+       <% end %>
+       </div>
       </div>
-      <% end %>
-      <div class="form-group">
-        <%= f.label :name, '名前' %>
-          <span class="textbox-label">必須</span>
-          <%= f.text_field :name, id: 'name', class: 'form-control', :placeholder => '山田 花子' %>
-        </div>
-
-        <div class="form-group">
-          <%= f.label :email, 'メールアドレス' %>
-          <span class="badge badge-info rounded-0">必須</span>
-          <small class="text-muted">例：user@example.com</small>
-          <%= f.text_field :email, id: 'email', class: 'form-control', :placeholder => 'メールアドレス' %>
-        </div>
-
-        <div class="form-group">
-          <%= f.label :message, 'お問い合わせ内容' %>
-          <span class="badge badge-info rounded-0">必須</span>
-          <small class="text-muted">パスワードなどの機密情報を含めないでください。</small>
-          <%= f.text_area :message, id: 'content', class: 'form-control', :placeholder => 'お問い合わせ内容', :rows => '5' %>
-        </div>
-
-        <div class="float-right">
-          <%= f.submit "確認", class: "btn btn-dark" %>
-        </div>
-      <% end %>
-      </div>
-     </div>
     </div>
+    <footer>
+      <p class="footer-text"> Ayaka Nishino　portfolio </p>
+    </footer>
  </body>
 </html>

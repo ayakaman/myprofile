@@ -1,42 +1,42 @@
 .contact {
+  width: 100%;
   display: inline-flex;
-  margin: 100px;
+  justify-content: center;
+  margin: 200px 0;
 }
 
 .contact-box {
-  padding: 8px 16px;
-  margin: 0 auto;
+  padding: 10px 50px;
   background: #fdfdfd;
   border-top: solid 40px #9E9E9E;
-  width: 80%;
-  height: 500px;
+  width: 60%;
+  height: 100%;
   box-shadow: -3px 7px 5px rgba(0, 0, 0, 0.22);
 }
 
-
-.textbox-label,
-.form-group {
-    color: #333;
-}
-
-.textbox-label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: .9em;
+.title {
+  font-size: 35px;
+  text-align: center;
+  padding: 20px 0px;
+  border-top: 3px dotted #9E9E9E;
+  border-bottom: 3px dotted #9E9E9E
 }
 
 .form-group {
-  padding: 8px 10px;
-  font-size: 20px;
+  text-align: center;
+  padding: 30px;
+  font-size: 25px;
 }
 
-.form-control::placeholder {
-
+.contact-text {
+  text-align: left;
+  margin-left: 135px;
 }
+
 
 .textbox-label {
   border-radius: 5px;
-  margin-right: 10px;
+  margin-left: 20px;
   width: 55px;
   display: inline-block;
   text-align: center;
@@ -44,4 +44,47 @@
   color: #fff;
   font-size: 18px;
 
+}
+
+.form-input {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-left: 40px;
+  padding: 5px 20px;
+  height: 50px;
+  width: 60%;
+  background: #eaedf2;
+  font-size: 18px;
+}
+
+.form-input-last {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-left: 40px;
+  padding: 5px 20px;
+  height: 160px;
+  width: 60%;
+  background: #eaedf2;
+  font-size: 18px;
+}
+
+.contact-bnt {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.btn {
+  border-radius: 10px;
+    /* margin-top: 32px; */
+    /* margin-left: auto; */
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 280px;
+    display: block;
+    letter-spacing: 0.05em;
+    background: #9E9E9E;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
 }
