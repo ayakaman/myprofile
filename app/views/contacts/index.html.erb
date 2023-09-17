@@ -11,8 +11,10 @@
      <a href="/lists/profile" class="top2"><span>ABOUT ME</span><span>私について</span></a>
      <a href="/contacts" class="top3"><span>content</span><span>問い合わせ</span></a>
    </header>
-   <h2 class="title">お問い合わせ</h2>
     <div class="main-v">
+      <div class="contact">
+      <div class="contact-box">
+        <h2 class="title">お問い合わせ</h2>
     <%= form_with model: @contact, local: true, url: contacts_confirm_path do |f| %>
       <% if @contact.errors.any? %>
       <div class="alert alert-danger" role="alert">
@@ -24,10 +26,9 @@
        </ul>
       </div>
       <% end %>
-      
       <div class="form-group">
         <%= f.label :name, '名前' %>
-          <span class="textbox-001-label">必須</span>
+          <span class="textbox-label">必須</span>
           <%= f.text_field :name, id: 'name', class: 'form-control', :placeholder => '山田 花子' %>
         </div>
 
@@ -49,7 +50,8 @@
           <%= f.submit "確認", class: "btn btn-dark" %>
         </div>
       <% end %>
-
+      </div>
+     </div>
     </div>
  </body>
 </html>

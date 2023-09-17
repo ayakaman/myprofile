@@ -1,36 +1,47 @@
-.textbox-001-label,
+.contact {
+  display: inline-flex;
+  margin: 100px;
+}
+
+.contact-box {
+  padding: 8px 16px;
+  margin: 0 auto;
+  background: #fdfdfd;
+  border-top: solid 40px #9E9E9E;
+  width: 80%;
+  height: 500px;
+  box-shadow: -3px 7px 5px rgba(0, 0, 0, 0.22);
+}
+
+
+.textbox-label,
 .form-group {
     color: #333;
 }
 
-.textbox-001-label {
+.textbox-label {
     display: block;
     margin-bottom: 5px;
     font-size: .9em;
 }
 
 .form-group {
-    width: 100%;
-    padding: 8px 10px;
-    border: 1px solid #969da3;
-    border-radius: 3px;
-    font-size: 1em;
-    line-height: 1.5;
+  padding: 8px 10px;
+  font-size: 20px;
 }
 
 .form-control::placeholder {
-    color: #999;
+
 }
 
-.textbox-001-label {
- border-radius: 5px;
- margin-right: 10px;
- padding-top: 10px;
- padding-bottom: 10px;
- width: 55px;
- display: inline-block;
- text-align: center;
- background: #340beb;
- color: #fff;
- font-size: 15px;
+.textbox-label {
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 55px;
+  display: inline-block;
+  text-align: center;
+  background: #F44336;
+  color: #fff;
+  font-size: 18px;
+
 }
