@@ -1,42 +1,53 @@
 
 <% provide :title, 'お問い合わせ' %>
-<div class="container mt-4">
-  <div class="row">
-    <div class="col-md-12 col-lg-6 offset-lg-3">
-      <h2>お問い合わせ</h2>
-      <nav aria-label="パンくずリスト" class="small">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><%= link_to 'トップページ', root_path %></li>
-          <li class="breadcrumb-item active" aria-current="page">お問い合わせ</li>
-        </ol>
-      </nav>
-      <hr />
-
-      <%= form_with model: @contact, local: true, url: contacts_done_path do |f| %>
-
-        <div class="form-group">
-          <%= f.label :name, '名前' %>
-          <%= f.text_field :name, value: @contact.name, id: 'name', class: 'form-control-plaintext', :placeholder => '名前' %>
-        </div>
-
-        <div class="form-group">
-          <%= f.label :email, 'メールアドレス' %>
-          <%= f.text_field :email, value: @contact.email, id: 'email', class: 'form-control-plaintext', :placeholder => 'メールアドレス' %>
-        </div>
-
-        <div class="form-group">
-          <%= f.label :content, 'お問い合わせ内容' %>
-          <%= f.text_area :message, value: @contact.message, id: 'content', class: 'form-control-plaintext', :placeholder => 'お問い合わせ内容', :rows => '5' %>
-        </div>
+<html lang="ja">
+ <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/lists.css">
+    <link rel="stylesheet" type="text/css" href="/contacts.css">
+ </head>
+ <body>
+    <header  class="heading">
+     <a href="/lists/top" class="top"><span>T</span><span>トップ</span></a>
+     <a href="/lists/profile" class="top2"><span>ABOUT ME</span><span>私について</span></a>
+     <a href="/contacts" class="top3"><span>CONTACT</span><span>問い合わせ</span></a>
+   </header>
+   <div class="main-v">
+     <div class="contact">
+       <div class="contact-box">
+        <h2 class="title">お問い合わせ</h2>
+        <%= form_with model: @contact, local: true, url: contacts_done_path do |f| %>
+         <div class="form-group">
+           <div class="contact-text">
+             <%= f.label :name, '名前' %>
+           </div>
+             <%= f.text_field :name, value: @contact.name, id: 'name', class: 'form-input', :placeholder => '名前' %>
+         </div>
+         <div class="form-group">
+           <div class="contact-text">
+             <%= f.label :email, 'メールアドレス' %>
+           </div>
+             <%= f.text_field :email, value: @contact.email, id: 'email', class: 'form-input', :placeholder => 'メールアドレス' %>
+         </div>
+         <div class="form-group">
+           <%= f.label :content, 'お問い合わせ内容' %>
+         </div>
+         <div class="contact-text">
+           <%= f.text_area :message, value: @contact.message, id: 'content', class: 'form-input-last', :placeholder => 'お問い合わせ内容', :rows => '5' %>
+         </div>
 
         <p>この内容で送信します。よろしいですか？</p>
 
-        <div class="float-right">
-          <%= f.submit "戻る", name: 'back', class: "btn btn-dark" %>
-          <%= f.submit "送信", class: "btn btn-dark" %>
+        <div class="contact-bnt">
+          <%= f.submit "戻る", name: 'back', class: "btn" %>
+          <%= f.submit "送信", class: "btn" %>
         </div>
-      <% end %>
-
-    </div>
-  </div>
-</div>
+        <% end %>
+       </div>
+     </div>
+   </div>
+   <footer>
+     <p class="footer-text"> Ayaka Nishino　portfolio </p>
+   </footer>
+ </body>
+</html>

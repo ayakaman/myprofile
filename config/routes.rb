@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   post 'contacts/confirm' => 'contacts#confirm'
   post 'contacts/done' => 'contacts#done'
 
+  get 'mockup/done' => 'mockup#done'
+
 end

@@ -75,16 +75,34 @@
 
 .btn {
   border-radius: 10px;
-    /* margin-top: 32px; */
-    /* margin-left: auto; */
-    margin: 0 auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 280px;
-    display: block;
-    letter-spacing: 0.05em;
-    background: #9E9E9E;
-    color: #fff;
-    font-weight: bold;
-    font-size: 20px;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 280px;
+  display: block;
+  letter-spacing: 0.05em;
+  background: #9E9E9E;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.done-textbox {
+  height: 500px;
+  padding-top: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.done-text {
+  background-color: white;
+  height: 150px;
+  font-size: 30px;
+}
+
+.back {
+  background-color: white;
+  height: 50px;
+  font-size: 20px;
 }
