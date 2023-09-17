@@ -1,20 +1,20 @@
 h1 {
   font-family: 'Amatic SC', cursive;
-  font-size: 5em;
+  font-size: 90px;
 	text-align: center;
-	line-height: 0.95em;
-	letter-spacing: 0.15em;
+	letter-spacing: 15px;
 	color: transparent;
-	-webkit-text-stroke: 0.02em rgba(0,0,0,1);
+	-webkit-text-stroke: 2px rgba(0,0,0,1);
+	background-color: white;
+	border-radius: 100%;
 }
 
 /*枠デザイン*/
 .myprofile {
   width: 70%;
-  /*height: 85%;*/
   margin: 0 auto;
   position: relative;
-  padding: 0.25em 1em;
+  padding: 16px 4px;
   border: solid 5px black;
   border-radius: 3px 0 3px 0;
   background-color: white;
@@ -58,14 +58,18 @@ border: solid 3px #ffcb8a; /*枠線*/
 }
 
 .myimg {
-  width: 300px;
-  height: 400px;
-  margin: 60px;
+  position: absolute;
+  width: 95%;
+  height: 530px;
+  margin: 0 auto;
+  opacity: 0.5;
 }
 
 .text {
+  position: relative;
   text-align: center;
-  margin: 0 auto;
+  margin-left: 410px;
+  font-weight: 900;
 }
 
 .vision {

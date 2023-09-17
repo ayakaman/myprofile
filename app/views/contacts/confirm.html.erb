@@ -30,18 +30,19 @@
              <%= f.text_field :email, value: @contact.email, id: 'email', class: 'form-input', :placeholder => 'メールアドレス' %>
          </div>
          <div class="form-group">
-           <%= f.label :content, 'お問い合わせ内容' %>
-         </div>
-         <div class="contact-text">
+           <div class="contact-text">
+             <%= f.label :message, 'お問い合わせ内容' %>
+           </div>
            <%= f.text_area :message, value: @contact.message, id: 'content', class: 'form-input-last', :placeholder => 'お問い合わせ内容', :rows => '5' %>
          </div>
-
-        <p>この内容で送信します。よろしいですか？</p>
-
-        <div class="contact-bnt">
-          <%= f.submit "戻る", name: 'back', class: "btn" %>
-          <%= f.submit "送信", class: "btn" %>
-        </div>
+         <div class="ctext">
+          <p>この内容で送信します。よろしいですか？</p>
+         </div>
+         <div class="contact-bnt">
+           <%= f.submit "戻る", name: 'back', class: "btn" %>
+           </br>
+           <%= f.submit "送信", class: "btn" %>
+         </div>
         <% end %>
        </div>
      </div>

@@ -1,0 +1,2 @@
+class Listwork < ApplicationRecord
+end

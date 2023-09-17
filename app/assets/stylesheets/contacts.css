@@ -68,6 +68,11 @@
   font-size: 18px;
 }
 
+.ctext {
+  font-size: 25px;
+  text-align: center;
+}
+
 .contact-bnt {
   margin-top: 50px;
   margin-bottom: 100px;

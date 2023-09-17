@@ -12,4 +12,6 @@ Rails.application.routes.draw do
 
   get 'mockup/done' => 'mockup#done'
 
+  get 'listwork/index' => 'listworks#index'
+
 end
